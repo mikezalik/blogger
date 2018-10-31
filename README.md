@@ -1,5 +1,3 @@
 # README
-
-
-"# blogger" 
+ 
 # blogger
