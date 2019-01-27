@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+    include ArticlesHelper
     def index
         @articles = Article.all
     end
@@ -15,8 +16,6 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.new(article_params)
-
-        
         redirect_to article_path(@article)
       
     
