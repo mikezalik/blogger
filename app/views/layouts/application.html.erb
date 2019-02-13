@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<h1>All Articles</h1>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<ul id="articles">
-  <% @articles.each do |article| %>
-    <li>
-    <%= link_to article.title, article_path(article), class: 'article_title' %>
-    </li>
-  <% end %>
-</ul>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
-
+  <body>
+    <%= yield %>
+  </body>
 </html>
